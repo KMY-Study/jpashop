@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: jpashop
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+#jdbc:h2:~/jpashop -> 1. ?? ?
+#jdbc:h2:tcp://localhost/~/jpashop 2. tcp ??
+
+  jpa:
+    hibernate:
+      ddl-auto: create # ????? drop&create ??? ??
+    properties:
+      hibernate:
+#        show_sql: true # System Console output
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.sql: debug #logger output
